@@ -19,6 +19,8 @@ function handleButton(button) {
         display.textContent = ""
     }  else if (value === '%') {
         display.textContent= `${eval(display.textContent)}%`
+    }  else if (value === "+/-") {
+        display.textContent=eval(display.textContent.replaceAll("×", "*").replaceAll("÷", "/")*-1)
     } else {
       display.textContent+=value
     }
